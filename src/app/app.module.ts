@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { Ng2CarouselModule } from './ng2-carousel/ng2-carousel.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CarouselComponent } from './carousel/carousel.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    Ng2CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
