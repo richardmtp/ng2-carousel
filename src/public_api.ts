@@ -1,0 +1,1 @@
+export * from './app/ng2-carousel/ng2-carousel.module'
