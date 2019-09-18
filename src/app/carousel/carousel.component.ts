@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FadeInAnimation } from '../animation/fade-in-out';
+import { FadeInAnimation } from '../animation/fade-in-animation';
 
 @Component({
   selector: 'app-carousel',

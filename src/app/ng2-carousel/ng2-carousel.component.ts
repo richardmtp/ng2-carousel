@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FadeInAnimation } from '../animation/fade-in-out';
+import { Component, OnInit, Input } from '@angular/core';
+import { FadeInAnimation } from '../animation/fade-in-animation';
+import { Ng2CarouselItem } from '../models/ng2-carousel-item.model';
 
 @Component({
   selector: 'ng2-carousel',
@@ -11,7 +12,7 @@ import { FadeInAnimation } from '../animation/fade-in-out';
 })
 export class Ng2CarouselComponent implements OnInit {
 
-  data = [];
+  @Input() items: Array<Ng2CarouselItem>;
 
   idx: number = -1;
 
@@ -23,23 +24,14 @@ export class Ng2CarouselComponent implements OnInit {
   }
   
   ngOnInit() {
-    this.data = []
-    this.data.push({thumb: '/assets/4k-wallpaper-afterglow-beach-2834758.jpg'})
-    this.data.push({thumb: '/assets/4k-wallpaper-astronomy-astrophotography-2666598.jpg'})
-    this.data.push({thumb: '/assets/animal-animal-photography-blur-145939.jpg'})
-    this.data.push({thumb: '/assets/4k-wallpaper-afterglow-beach-2834758.jpg'})
-    this.data.push({thumb: '/assets/4k-wallpaper-astronomy-astrophotography-2666598.jpg'})
-    this.data.push({thumb: '/assets/animal-animal-photography-blur-145939.jpg'})
-    this.data.push({thumb: '/assets/4k-wallpaper-afterglow-beach-2834758.jpg'})
-    this.data.push({thumb: '/assets/4k-wallpaper-astronomy-astrophotography-2666598.jpg'})
-    this.data.push({thumb: '/assets/animal-animal-photography-blur-145939.jpg'})
+    
 
     this.play()
   }
 
   play() {
     this.idx += 1;
-    if(this.idx >= this.data.length) {
+    if(this.idx >= this.items.length) {
       this.idx = 0
     }
     this.timeout = setTimeout(() => {
