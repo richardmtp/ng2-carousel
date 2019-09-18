@@ -16,3 +16,61 @@
   }
   
 }
+.prv_button {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  color: white;
+  height: 100%;
+  width: 25px;
+  // border: 1px solid white;
+}
+
+.next_button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  height: 100%;
+  width: 25px;
+  // border: 1px solid white;
+}
+
+.prv_button:hover {
+  cursor: pointer;
+}
+.next_button:hover {
+  cursor: pointer;
+}
+.prv_button_inside {
+  width: 10px;
+  height: 10px;
+  border: 2px solid white;
+  position: relative;
+  left: 8px;
+  top: 45%;
+  border-right: none;
+  border-bottom: none;
+  transform: rotate(-45deg);
+}
+.prv_button_inside:hover {
+  border: 2px solid black;
+  border-right: none;
+  border-bottom: none;
+}
+.next_button_inside {
+  width: 10px;
+  height: 10px;
+  border: 2px solid white;
+  position: relative;
+  left: 5px;
+  top: 45%;
+  border-left: none;
+  border-bottom: none;
+  transform: rotate(45deg);
+}
+.next_button_inside:hover {
+  border: 2px solid black;
+  border-left: none;
+  border-bottom: none;
+}
