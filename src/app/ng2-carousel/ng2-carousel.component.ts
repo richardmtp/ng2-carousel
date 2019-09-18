@@ -39,4 +39,12 @@ export class Ng2CarouselComponent implements OnInit {
     }, this.interval);
   }
 
+  playNext() {
+    console.log('playNext')
+  }
+
+  playPrv() {
+    console.log('playPrv')
+  }
+
 }

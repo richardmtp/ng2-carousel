@@ -1,3 +1,5 @@
 <div class="container">
   <img [@fadeIn]="idx === i?'active':'hidden'" *ngFor="let item of items; let i = index" src="{{item.src}}" >
+  <div class="prv_button" (click)="playPrv()"><div class="prv_button_inside"></div></div>
+  <div class="next_button" (click)="playNext()"><div class="next_button_inside"></div></div>
 </div>
