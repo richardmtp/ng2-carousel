@@ -6,11 +6,11 @@
   <button (click)="playNext()"> Next </button>
 </div>
 <div style="width: 500px; height: 200px; margin-top: 50px;">
-  <ng2-carousel [items]="items"></ng2-carousel>
+  <ng2-carousel #c2 [items]="items" [setting]="setting2"></ng2-carousel>
 </div>
 
 <div style="width: 600px; height: 400px; margin-top: 50px; position: absolute; top: 250px; left: 600px;">
-  <ng2-carousel [items]="items"></ng2-carousel>
+  <ng2-carousel [items]="items" [setting]="setting3"></ng2-carousel>
 </div>
 
 <div style="width: 500px; height: 300px; margin-top: 50px;">

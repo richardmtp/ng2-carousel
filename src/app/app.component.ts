@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Ng2CarouselItem } from './models/ng2-carousel-item.model';
 import { Ng2CarouselComponent } from './ng2-carousel/ng2-carousel.component';
 import { Ng2CarouselSetting } from './models/ng2-carousel-setting.model';
+import { Ng2AnimationType } from './models/ng2-carousel-animation-type.model';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,13 @@ export class AppComponent {
 
   setting: Ng2CarouselSetting;
 
+  setting2: Ng2CarouselSetting;
+
+  setting3: Ng2CarouselSetting;
+
   @ViewChild('c1', {static: true}) c1: Ng2CarouselComponent;
+
+  @ViewChild('c2', {static: true}) c2: Ng2CarouselComponent;
 
   constructor() {
     this.items = []
@@ -26,8 +33,26 @@ export class AppComponent {
       autoPlay: true,
       showArrow: false,
       holdTime: 5000,
-      showDots: true
+      showDots: true,
+      animation: Ng2AnimationType.FLY_FROM_LEFT
     }
+
+    this.setting2 = {
+      autoPlay: true,
+      showArrow: false,
+      holdTime: 5000,
+      showDots: true,
+      animation: Ng2AnimationType.FLY_FROM_RIGHT
+    }
+
+    this.setting3 = {
+      autoPlay: true,
+      showArrow: true,
+      holdTime: 5000,
+      showDots: true,
+      animation: Ng2AnimationType.ZOOM_IN_FROM_CENTER
+    }
+
   }
 
   playNext() {
