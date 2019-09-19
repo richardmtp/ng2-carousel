@@ -1,5 +1,21 @@
 <div class="container">
-  <img [@fadeIn]="idx === i?'active':'hidden'" *ngFor="let item of items; let i = index" src="{{item.src}}" >
+  
+  <div *ngIf="animation.FADE_IN === setting.animation">
+    <img [@fadeIn]="idx === i?'active':'hidden'" *ngFor="let item of items; let i = index" src="{{item.src}}" >
+  </div>
+
+  <div *ngIf="animation.ZOOM_IN_FROM_CENTER === setting.animation">
+    <img [@zoomFromCenter]="idx === i?'active':'hidden'" *ngFor="let item of items; let i = index" src="{{item.src}}" >
+  </div>
+
+  <div *ngIf="animation.FLY_FROM_LEFT === setting.animation">
+    <img [@flyFromLeft]="idx === i?'active':'hidden'" *ngFor="let item of items; let i = index" src="{{item.src}}" >
+  </div>
+
+  <div *ngIf="animation.FLY_FROM_RIGHT === setting.animation">
+    <img [@flyFromRight]="idx === i?'active':'hidden'" *ngFor="let item of items; let i = index" src="{{item.src}}" >
+  </div>
+  
   <div *ngIf="setting.showArrow && items.length > 1" class="prev_button" (click)="playPrev()"><div class="prev_button_inside"></div></div>
   <div *ngIf="setting.showArrow && items.length > 1" class="next_button" (click)="playNext()"><div class="next_button_inside"></div></div>
   <div class="dots" *ngIf="setting.showDots && items.length > 1">

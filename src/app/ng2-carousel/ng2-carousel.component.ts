@@ -1,15 +1,19 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FadeInAnimation } from '../animation/fade-in-animation';
 import { Ng2CarouselItem } from '../models/ng2-carousel-item.model';
 import { Ng2CarouselSetting } from '../models/ng2-carousel-setting.model';
 import { DEFAULT } from '../models/ng2-carousel-setting-default.model';
+import { ZoomFromCenterAnimation, FadeInAnimation, FlyFromLeftAnimation, FlyFromRightAnimation } from '../animation/animation';
+import { Ng2AnimationType } from '../models/ng2-carousel-animation-type.model';
 
 @Component({
   selector: 'ng2-carousel',
   templateUrl: './ng2-carousel.component.html',
   styleUrls: ['./ng2-carousel.component.scss'],
   animations: [
-    FadeInAnimation
+    FadeInAnimation,
+    ZoomFromCenterAnimation,
+    FlyFromLeftAnimation,
+    FlyFromRightAnimation
   ]
 })
 export class Ng2CarouselComponent implements OnInit {
@@ -18,25 +22,24 @@ export class Ng2CarouselComponent implements OnInit {
 
   @Input() setting: Ng2CarouselSetting;
 
-  idx: number = -1;
+  private idx: number = -1;
 
-  interval: number = 5000;
+  private timeout: any;
 
-  timeout: any;
+  animation = Ng2AnimationType;
   
   constructor() {
   }
   
   ngOnInit() {
+    console.log(this.animation)
     console.log(this.setting)
     if(!this.setting) {
-      console.log(DEFAULT)
       this.setting = Object.assign({}, DEFAULT);
     } else {
       let _DEFAULT = JSON.parse(JSON.stringify(DEFAULT))
       this.setting = Object.assign(_DEFAULT, this.setting);
     }
-    console.log(this.setting)
     this.start();
   }
 

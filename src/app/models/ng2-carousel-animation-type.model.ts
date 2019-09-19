@@ -1,0 +1,6 @@
+export enum Ng2AnimationType {
+  FADE_IN =  'FADE_IN',
+  ZOOM_IN_FROM_CENTER =  'ZOOM_IN_FROM_CENTER',
+  FLY_FROM_LEFT =  'FLY_FROM_LEFT',
+  FLY_FROM_RIGHT =  'FLY_FROM_RIGHT',
+}
