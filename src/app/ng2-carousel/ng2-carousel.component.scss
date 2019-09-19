@@ -81,6 +81,7 @@
   display: flex;
   position: absolute;
   bottom: 0;
+  align-items: center;
   .dot {
     height: 7px;
     width: 7px;
@@ -93,5 +94,13 @@
   .other {
     border: 1px solid white;
     box-sizing: border-box;
+  }
+  .dot:hover{
+    cursor: pointer;
+  }
+  .dot:active{
+    height: 15px;
+    width: 15px;
+    background: white;
   }
 }
