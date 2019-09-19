@@ -16,7 +16,7 @@
   }
   
 }
-.prv_button {
+.prev_button {
   position: absolute;
   top: 0;
   left: 0px;
@@ -36,13 +36,13 @@
   // border: 1px solid white;
 }
 
-.prv_button:hover {
+.prev_button:hover {
   cursor: pointer;
 }
 .next_button:hover {
   cursor: pointer;
 }
-.prv_button_inside {
+.prev_button_inside {
   width: 10px;
   height: 10px;
   border: 2px solid white;
@@ -53,7 +53,7 @@
   border-bottom: none;
   transform: rotate(-45deg);
 }
-.prv_button_inside:hover {
+.prev_button_inside:hover {
   border: 2px solid black;
   border-right: none;
   border-bottom: none;
@@ -90,17 +90,19 @@
   }
   .current {
     background: white;
+    // animation: zoom .5s ease-in;
+    // transition: transform .2s;
   }
   .other {
     border: 1px solid white;
     box-sizing: border-box;
   }
-  .dot:hover{
-    cursor: pointer;
-  }
-  .dot:active{
-    height: 15px;
-    width: 15px;
-    background: white;
+  @keyframes zoom {
+    0% {
+      transform: scale(2)
+    }
+    100% {
+      transform: scale(1)
+    }
   }
 }
