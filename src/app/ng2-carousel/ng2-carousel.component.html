@@ -1,5 +1,12 @@
 <div class="container">
+  <!-- <img src="assets/4k-wallpaper-afterglow-beach-2834758.jpg" alt=""> -->
   <img [@fadeIn]="idx === i?'active':'hidden'" *ngFor="let item of items; let i = index" src="{{item.src}}" >
   <div class="prv_button" (click)="playPrv()"><div class="prv_button_inside"></div></div>
   <div class="next_button" (click)="playNext()"><div class="next_button_inside"></div></div>
+  <div class="dots">
+    <div class="dot current"></div>
+    <div class="dot other"></div>
+    <div class="dot other"></div>
+    <div class="dot other"></div>
+  </div>
 </div>
