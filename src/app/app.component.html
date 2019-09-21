@@ -1,33 +1,52 @@
-<!-- <div>
-  <button (click)="playPrev()">Prev</button>
-      <div style="width: 500px; height: 250px; margin: 0 auto;">
-    <ng2-carousel #c1 [items]="items" [setting]="setting"></ng2-carousel>
-  </div>
-  <button (click)="playNext()"> Next </button>
-</div> -->
-<!-- <div style="width: 500px; height: 200px; margin-top: 50px;">
-  <ng2-carousel [items]="items" [setting]="setting2"></ng2-carousel>
-</div>
-
-<div style="width: 600px; height: 400px; margin-top: 50px; position: absolute; top: 250px; left: 600px;">
-  <ng2-carousel [items]="items" [setting]="setting3"></ng2-carousel>
-</div>
-
-<div style="width: 500px; height: 300px; margin-top: 50px;">
-  <ng2-carousel [items]="items" [setting]="setting4"></ng2-carousel>
-</div> -->
-
 <div class="heading-description_container">
   <div class="heading">
     <h1>ng2-carousel</h1>
   </div>
   <div class="descrption">
     <h4>Description</h4>
-    <p>Ng2-Carousel is a simple carousel that any one can use in angular projects, the carousel can be modified in your own way</p>
+    <p>An amazing responsive carousel for Angular projects. Which supports auto play, manual controls with lot of animations</p>
     <div class="example-container">
-      <h5 class="eg">Eg:</h5>
-      <p>  &#60;ng2-carousel [items]="items" [setting]="setting"&#62;&#60;/ng2-carousel&#62; </p>
-      <p>Items : items can be array of images or http url</p>
+      <h5 class="eg">How to use?</h5>
+      <p> * npm i ng2-carousel </p>
+      <p> * Import Ng2CarouselModule in your app.module.ts </p>
+      <pre>
+          import &#60; Ng2CarouselModule &#62; from 'ng2-carousel';
+          imports: [
+            ...,
+            Ng2CarouselModule
+          ],
+      </pre>
+      <p> * add ng2-carousel tag app.module.html </p>
+      <pre>
+          &#60;ng2-carousel [items]="items" [setting]="setting"&#62;&#60;/ng2-carousel&#62;
+      </pre>
+      <p> * app.module.ts import following items</p>
+      <pre>
+          import &#60; Ng2CarouselItem, Ng2CarouselSetting, Ng2AnimationType &#62; from 'ng2-carousel';
+
+          items: Array&#60;Ng2CarouselItem&#62; = &#91;&#93;;
+
+          setting: Ng2CarouselSetting;
+
+          export class AppComponent &#123;
+            this.items = &#91;&#93;
+            this.items.push&#40;&#123;src: 'assets/image1.png'&#125;&#41;
+            this.items.push&#40;&#123;src: 'assets/image2.png'&#125;&#41;
+            this.items.push&#40;&#123;src: 'assets/image3.png'&#125;&#41;
+
+            this.setting = &#123;
+              autoPlay: true,
+              showArrow: true,
+              holdTime: 5000,
+              showDots: false,
+              animation: Ng2AnimationType.FADE_IN_LEFT
+            &#125;
+
+          &#125;
+
+      </pre>
+
+      <!-- <p>Items : items can be array of images or http url</p>
       <p>Settings : </p> <pre>
       setting = &#123;
         autoPlay: true,
@@ -36,7 +55,7 @@
         showDots: false,
         animation: Ng2AnimationType.FADE_IN_LEFT
       &#125;
-      </pre>
+      </pre> -->
     </div>
   </div>
 </div>
@@ -172,21 +191,24 @@
   </div>
   <div class="manual-description">
       <h5 class="eg">Eg:</h5>
-      <p> &#60;ng2-carousel <strong>#manualControl</strong> [items]="items" [setting]="setting2"&#62;&#60;/ng2-carousel&#62; </p>
-      <p>#manualControl : This is 'Reference variable' which is used to control ng2-carousel as a @ViewChild</p>
-      <p>On button click call the function as:</p>
-      <pre>
-  @ViewChild('manualControl', &#123;static: true&#125;) manualControl: Ng2CarouselComponent;
-
-  playNext() &#123;
-    this.manualControl.playNext()
-  &#125;
-
-  playPrev() &#123;
-    this.manualControl.playPrev()
-  &#125;
+      <pre> 
+        // #manualControl : This is 'Reference variable' which is used to control ng2-carousel as a @ViewChild
+        &#60;ng2-carousel <strong>#manualControl</strong> [items]="items" [setting]="setting2"&#62;&#60;/ng2-carousel&#62; 
       </pre>
+      <pre>
+        // Trigger button click
 
+        import &#60; Ng2CarouselComponent &#62; from 'ng2-carousel';
+        @ViewChild('manualControl', &#123;static: true&#125;) manualControl: Ng2CarouselComponent;
+
+        playNext() &#123;
+          this.manualControl.playNext()
+        &#125;
+
+        playPrev() &#123;
+          this.manualControl.playPrev()
+        &#125;
+      </pre>
   </div>
   <div class="item_demo_container">
     <div class="item_demo with_button">
