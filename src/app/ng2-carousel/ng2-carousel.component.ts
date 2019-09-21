@@ -2,18 +2,18 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Ng2CarouselItem } from '../models/ng2-carousel-item.model';
 import { Ng2CarouselSetting } from '../models/ng2-carousel-setting.model';
 import { DEFAULT } from '../models/ng2-carousel-setting-default.model';
-import { ZoomFromCenterAnimation, FadeInAnimation, FlyFromLeftAnimation, FlyFromRightAnimation } from '../animation/animation';
 import { Ng2AnimationType } from '../models/ng2-carousel-animation-type.model';
+import { FadeIn, FadeInLeft, FadeInRight, ZoomIn } from '../animation/animation';
 
 @Component({
   selector: 'ng2-carousel',
   templateUrl: './ng2-carousel.component.html',
   styleUrls: ['./ng2-carousel.component.scss'],
   animations: [
-    FadeInAnimation,
-    ZoomFromCenterAnimation,
-    FlyFromLeftAnimation,
-    FlyFromRightAnimation
+    FadeIn,
+    FadeInLeft,
+    FadeInRight,
+    ZoomIn
   ]
 })
 export class Ng2CarouselComponent implements OnInit {
