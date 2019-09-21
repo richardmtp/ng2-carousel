@@ -1,9 +1,10 @@
+An amazing responsive carousel for Angular projects. Which supports auto play, manual controls with lot of animations
+
 ### Demo
 https://ng2-carousel.s3.us-east-2.amazonaws.com/1.0.0/index.html
 ### Getting started
 
 `$ npm i ng2-carousel`
-
 ####Import Ng2CarouselModule in your app.module.ts
 
     import < Ng2CarouselModule > from 'ng2-carousel';
@@ -11,12 +12,10 @@ https://ng2-carousel.s3.us-east-2.amazonaws.com/1.0.0/index.html
       ...,
        Ng2CarouselModule
     ],
-
 ####Add ng2-carousel tag in your component html
 ```
 <ng2-carousel [items]="items" [setting]="setting"></ng2-carousel>
 ```
-
 ####Import following items in your component
 ```javascript
 import < Ng2CarouselItem, Ng2CarouselSetting, Ng2AnimationType > from 'ng2-carousel';
@@ -37,7 +36,6 @@ export class AppComponent {
 	}
 }
 ```
-
 ###MANUAL CONTROL
 ```
 <ng2-carousel #manualControl [items]="items" [setting]="setting"></ng2-carousel> 
