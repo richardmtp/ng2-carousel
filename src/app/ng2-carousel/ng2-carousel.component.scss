@@ -1,0 +1,112 @@
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  top: o;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+  }
+  
+}
+.card-like {
+  width: 80% !important;
+  border-radius: 30px;
+}
+.prev_button {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  color: white;
+  height: 100%;
+  width: 25px;
+  // border: 1px solid white;
+}
+
+.next_button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  height: 100%;
+  width: 25px;
+  // border: 1px solid white;
+}
+
+.prev_button:hover {
+  cursor: pointer;
+}
+.next_button:hover {
+  cursor: pointer;
+}
+.prev_button_inside {
+  width: 10px;
+  height: 10px;
+  border: 2px solid white;
+  position: relative;
+  left: 8px;
+  top: 45%;
+  border-right: none;
+  border-bottom: none;
+  transform: rotate(-45deg);
+}
+.prev_button_inside:hover {
+  border: 2px solid black;
+  border-right: none;
+  border-bottom: none;
+}
+.next_button_inside {
+  width: 10px;
+  height: 10px;
+  border: 2px solid white;
+  position: relative;
+  left: 5px;
+  top: 45%;
+  border-left: none;
+  border-bottom: none;
+  transform: rotate(45deg);
+}
+.next_button_inside:hover {
+  border: 2px solid black;
+  border-left: none;
+  border-bottom: none;
+}
+.dots {
+  width: 100%;
+  height: 20px;
+  justify-content: center;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  align-items: center;
+  .dot {
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    margin: 0 2px;
+  }
+  .current {
+    background: white;
+    // animation: zoom .5s ease-in;
+    // transition: transform .2s;
+  }
+  .other {
+    border: 1px solid white;
+    box-sizing: border-box;
+  }
+  @keyframes zoom {
+    0% {
+      transform: scale(2)
+    }
+    100% {
+      transform: scale(1)
+    }
+  }
+}
