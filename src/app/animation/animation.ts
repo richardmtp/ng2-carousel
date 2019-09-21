@@ -94,7 +94,7 @@ export const CardInRight = [
     transition('active => hidden', [
       sequence([
         animate('0ms 2000ms cubic-bezier(0.35, 0, 0.25, 1)', style({
-          left: '-100%',
+          left: '-80%',
         })),
       ])
     ]),
