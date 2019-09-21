@@ -1,14 +1,14 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
-import { Ng2CarouselItem } from '../models/ng2-carousel-item.model';
-import { Ng2CarouselSetting } from '../models/ng2-carousel-setting.model';
-import { DEFAULT } from '../models/ng2-carousel-setting-default.model';
-import { Ng2AnimationType } from '../models/ng2-carousel-animation-type.model';
+import { NgxCarouselItem } from '../models/ngx-carousel-item.model';
+import { NgxCarouselSetting } from '../models/ngx-carousel-setting.model';
+import { DEFAULT } from '../models/ngx-carousel-setting-default.model';
+import { NgxAnimationType } from '../models/ngx-carousel-animation-type.model';
 import { FadeIn, FadeInLeft, FadeInRight, ZoomIn, CardInLeft, CardInRight } from '../animation/animation';
 
 @Component({
-  selector: 'ng2-carousel',
-  templateUrl: './ng2-carousel.component.html',
-  styleUrls: ['./ng2-carousel.component.scss'],
+  selector: 'ngx-carousel',
+  templateUrl: './ngx-carousel.component.html',
+  styleUrls: ['./ngx-carousel.component.scss'],
   animations: [
     FadeIn,
     FadeInLeft,
@@ -18,17 +18,17 @@ import { FadeIn, FadeInLeft, FadeInRight, ZoomIn, CardInLeft, CardInRight } from
     CardInRight,
   ]
 })
-export class Ng2CarouselComponent implements OnInit, OnDestroy {
+export class NgxCarouselComponent implements OnInit, OnDestroy {
 
-  @Input() items: Array<Ng2CarouselItem>;
+  @Input() items: Array<NgxCarouselItem>;
 
-  @Input() setting: Ng2CarouselSetting;
+  @Input() setting: NgxCarouselSetting;
 
   idx: number = -1;
 
   private timeout: any;
 
-  animation = Ng2AnimationType;
+  animation = NgxAnimationType;
   
   constructor() {
   }

@@ -1,13 +1,13 @@
 {
-  "name": "ng2-carousel",
-  "version": "1.0.0",
+  "name": "ngx-carousel",
+  "version": "1.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "demo": "ng build --prod --base-href /1.0.0/",
+    "demo": "ng build --prod --base-href /1.0.1/",
     "build": "ng-packagr -p package.json",
     "packagr": "ng-packagr -p ng-package.json"
   },
