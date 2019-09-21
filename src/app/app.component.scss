@@ -63,6 +63,12 @@
     margin-bottom: 10px;
   }
 }
+button:hover {
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
 @media only screen and (min-width: 1150px) {
   .item_demo_container {
     display: block;
