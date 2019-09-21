@@ -1,8 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
-import { NgxCarouselItem } from './models/ngx-carousel-item.model';
-import { NgxCarouselComponent } from './ngx-carousel/ngx-carousel.component';
-import { NgxCarouselSetting } from './models/ngx-carousel-setting.model';
-import { NgxAnimationType } from './models/ngx-carousel-animation-type.model';
+import { NgrxCarouselItem } from './models/ngrx-carousel-item.model';
+import { NgrxCarouselComponent } from './ngrx-carousel/ngrx-carousel.component';
+import { NgrxCarouselSetting } from './models/ngrx-carousel-setting.model';
+import { NgrxAnimationType } from './models/ngrx-carousel-animation-type.model';
 
 @Component({
   selector: 'app-root',
@@ -11,24 +11,24 @@ import { NgxAnimationType } from './models/ngx-carousel-animation-type.model';
 })
 export class AppComponent {
 
-  items: Array<NgxCarouselItem> = []
+  items: Array<NgrxCarouselItem> = []
 
-  setting: NgxCarouselSetting;
+  setting: NgrxCarouselSetting;
 
-  settingx: NgxCarouselSetting;
+  settingrx: NgrxCarouselSetting;
 
-  setting3: NgxCarouselSetting;
+  setting3: NgrxCarouselSetting;
 
-  setting4: NgxCarouselSetting;
+  setting4: NgrxCarouselSetting;
 
-  setting5: NgxCarouselSetting;
+  setting5: NgrxCarouselSetting;
 
-  setting6: NgxCarouselSetting;
+  setting6: NgrxCarouselSetting;
 
-  setting7: NgxCarouselSetting;
+  setting7: NgrxCarouselSetting;
 
 
-  @ViewChild('manualControl', {static: true}) manualControl: NgxCarouselComponent;
+  @ViewChild('manualControl', {static: true}) manualControl: NgrxCarouselComponent;
 
   constructor() {
     this.items = []
@@ -41,15 +41,15 @@ export class AppComponent {
       showArrow: false,
       holdTime: 5000,
       showDots: false,
-      animation: NgxAnimationType.CARD_IN_LEFT
+      animation: NgrxAnimationType.CARD_IN_LEFT
     }
 
-    this.settingx = {
+    this.settingrx = {
       autoPlay: true,
       showArrow: false,
       holdTime: 5000,
       showDots: false,
-      animation: NgxAnimationType.CARD_IN_RIGHT
+      animation: NgrxAnimationType.CARD_IN_RIGHT
     }
 
     this.setting3 = {
@@ -57,7 +57,7 @@ export class AppComponent {
       showArrow: true,
       holdTime: 5000,
       showDots: true,
-      animation: NgxAnimationType.FADE_IN
+      animation: NgrxAnimationType.FADE_IN
     }
 
     this.setting4 = {
@@ -65,7 +65,7 @@ export class AppComponent {
       showArrow: true,
       holdTime: 5000,
       showDots: true,
-      animation: NgxAnimationType.FADE_IN_LEFT
+      animation: NgrxAnimationType.FADE_IN_LEFT
     }
 
     this.setting5 = {
@@ -73,7 +73,7 @@ export class AppComponent {
       showArrow: true,
       holdTime: 5000,
       showDots: true,
-      animation: NgxAnimationType.FADE_IN_RIGHT
+      animation: NgrxAnimationType.FADE_IN_RIGHT
     }
 
     this.setting6 = {
@@ -81,14 +81,14 @@ export class AppComponent {
       showArrow: true,
       holdTime: 5000,
       showDots: true,
-      animation: NgxAnimationType.ZOOM_IN
+      animation: NgrxAnimationType.ZOOM_IN
     }
     this.setting7 = {
       autoPlay: false,
       showArrow: false,
       holdTime: 5000,
       showDots: true,
-      animation: NgxAnimationType.ZOOM_IN
+      animation: NgrxAnimationType.ZOOM_IN
     }
 
   }

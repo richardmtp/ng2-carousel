@@ -1,14 +1,14 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
-import { NgxCarouselItem } from '../models/ngx-carousel-item.model';
-import { NgxCarouselSetting } from '../models/ngx-carousel-setting.model';
-import { DEFAULT } from '../models/ngx-carousel-setting-default.model';
-import { NgxAnimationType } from '../models/ngx-carousel-animation-type.model';
+import { NgrxCarouselItem } from '../models/ngrx-carousel-item.model';
+import { NgrxCarouselSetting } from '../models/ngrx-carousel-setting.model';
+import { DEFAULT } from '../models/ngrx-carousel-setting-default.model';
+import { NgrxAnimationType } from '../models/ngrx-carousel-animation-type.model';
 import { FadeIn, FadeInLeft, FadeInRight, ZoomIn, CardInLeft, CardInRight } from '../animation/animation';
 
 @Component({
-  selector: 'ngx-carousel',
-  templateUrl: './ngx-carousel.component.html',
-  styleUrls: ['./ngx-carousel.component.scss'],
+  selector: 'ngrx-carousel',
+  templateUrl: './ngrx-carousel.component.html',
+  styleUrls: ['./ngrx-carousel.component.scss'],
   animations: [
     FadeIn,
     FadeInLeft,
@@ -18,17 +18,17 @@ import { FadeIn, FadeInLeft, FadeInRight, ZoomIn, CardInLeft, CardInRight } from
     CardInRight,
   ]
 })
-export class NgxCarouselComponent implements OnInit, OnDestroy {
+export class NgrxCarouselComponent implements OnInit, OnDestroy {
 
-  @Input() items: Array<NgxCarouselItem>;
+  @Input() items: Array<NgrxCarouselItem>;
 
-  @Input() setting: NgxCarouselSetting;
+  @Input() setting: NgrxCarouselSetting;
 
   idx: number = -1;
 
   private timeout: any;
 
-  animation = NgxAnimationType;
+  animation = NgrxAnimationType;
   
   constructor() {
   }
