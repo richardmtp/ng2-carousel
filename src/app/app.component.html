@@ -1,13 +1,12 @@
-<div>
+<!-- <div>
   <button (click)="playPrev()">Prev</button>
-  <!-- <div style="width: 500px; height: 200px; margin: 0 auto; box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important"> -->
       <div style="width: 500px; height: 250px; margin: 0 auto;">
     <ng2-carousel #c1 [items]="items" [setting]="setting"></ng2-carousel>
   </div>
   <button (click)="playNext()"> Next </button>
-</div>
-<div style="width: 500px; height: 200px; margin-top: 50px;">
-  <ng2-carousel #c2 [items]="items" [setting]="setting2"></ng2-carousel>
+</div> -->
+<!-- <div style="width: 500px; height: 200px; margin-top: 50px;">
+  <ng2-carousel [items]="items" [setting]="setting2"></ng2-carousel>
 </div>
 
 <div style="width: 600px; height: 400px; margin-top: 50px; position: absolute; top: 250px; left: 600px;">
@@ -16,4 +15,195 @@
 
 <div style="width: 500px; height: 300px; margin-top: 50px;">
   <ng2-carousel [items]="items" [setting]="setting4"></ng2-carousel>
+</div> -->
+
+<div class="heading-description_container">
+  <div class="heading">
+    <h1>ng2-carousel</h1>
+  </div>
+  <div class="descrption">
+    <h4>Description</h4>
+    <p>Ng2-Carousel is a simple carousel that any one can use in angular projects, the carousel can be modified in your own way</p>
+    <div class="example-container">
+      <h5 class="eg">Eg:</h5>
+      <p>  &#60;ng2-carousel [items]="items" [setting]="setting2"&#62;&#60;/ng2-carousel&#62; </p>
+      <p>Items : items can be array of images or http url</p>
+      <p>Settings : </p> <pre>
+      setting = &#123;
+        autoPlay: true,
+        showArrow: true,
+        holdTime: 5000,
+        showDots: false,
+        animation: Ng2AnimationType.FADE_IN_LEFT
+      &#125;
+      </pre>
+    </div>
+  </div>
+</div>
+<div class="item_container">
+  <div class="item_heading">
+    <h1>CARD IN LEFT</h1>
+  </div>
+  <div class="item_demo_container">
+    <div class="item_demo">
+      <ng2-carousel [items]="items" [setting]="setting"></ng2-carousel>
+    </div>
+    <div class="item_details">
+      <pre>
+    setting = &#123;
+      autoPlay: true,
+      showArrow: true,
+      holdTime: 5000,
+      showDots: false,
+      animation: Ng2AnimationType.CARD_IN_LEFT
+    &#125;
+      </pre>
+    </div>
+  </div>
+</div>
+<div class="item_container">
+  <div class="item_heading">
+    <h1>CARD IN RIGHT</h1>
+  </div>
+  <div class="item_demo_container">
+    <div class="item_demo">
+      <ng2-carousel [items]="items" [setting]="setting2"></ng2-carousel>
+    </div>
+    <div class="item_details">
+      <pre>
+    setting = &#123;
+      autoPlay: true,
+      showArrow: true,
+      holdTime: 5000,
+      showDots: true,
+      animation: Ng2AnimationType.CARD_IN_RIGHT
+    &#125;
+      </pre>
+    </div>
+  </div>
+</div>
+<div class="item_container">
+  <div class="item_heading">
+    <h1>FADE IN</h1>
+  </div>
+  <div class="item_demo_container">
+    <div class="item_demo">
+      <ng2-carousel [items]="items" [setting]="setting3"></ng2-carousel>
+    </div>
+    <div class="item_details">
+      <pre>
+    setting = &#123;
+      autoPlay: true,
+      showArrow: true,
+      holdTime: 5000,
+      showDots: true,
+      animation: Ng2AnimationType.FADE_IN
+    &#125;
+      </pre>
+    </div>
+  </div>
+</div>
+<div class="item_container">
+  <div class="item_heading">
+    <h1>FADE IN LEFT</h1>
+  </div>
+  <div class="item_demo_container">
+    <div class="item_demo">
+      <ng2-carousel [items]="items" [setting]="setting4"></ng2-carousel>
+    </div>
+    <div class="item_details">
+      <pre>
+    setting = &#123;
+      autoPlay: true,
+      showArrow: true,
+      holdTime: 5000,
+      showDots: true,
+      animation: Ng2AnimationType.FADE_IN_LEFT
+    &#125;
+      </pre>
+    </div>
+  </div>
+</div>
+<div class="item_container">
+  <div class="item_heading">
+    <h1>FADE IN RIGHT</h1>
+  </div>
+  <div class="item_demo_container">
+    <div class="item_demo">
+      <ng2-carousel [items]="items" [setting]="setting5"></ng2-carousel>
+    </div>
+    <div class="item_details">
+      <pre>
+    setting = &#123;
+      autoPlay: true,
+      showArrow: true,
+      holdTime: 5000,
+      showDots: true,
+      animation: Ng2AnimationType.FADE_IN_RIGHT
+    &#125;
+      </pre>
+    </div>
+  </div>
+</div>
+<div class="item_container">
+  <div class="item_heading">
+    <h1>ZOOM IN</h1>
+  </div>
+  <div class="item_demo_container">
+    <div class="item_demo">
+      <ng2-carousel [items]="items" [setting]="setting6"></ng2-carousel>
+    </div>
+    <div class="item_details">
+      <pre>
+    setting = &#123;
+      autoPlay: true,
+      showArrow: true,
+      holdTime: 5000,
+      showDots: true,
+      animation: Ng2AnimationType.ZOOM_IN
+    &#125;
+      </pre>
+    </div>
+  </div>
+</div>
+<div class="item_container">
+  <div class="item_heading">
+    <h1>MANUAL CONTROL</h1>
+  </div>
+  <div class="manual-description">
+      <h5 class="eg">Eg:</h5>
+      <p> &#60;ng2-carousel <strong>#manualControl</strong> [items]="items" [setting]="setting2"&#62;&#60;/ng2-carousel&#62; </p>
+      <p>#manualControl : This is 'Reference variable' which is used to control ng2-carousel as a @ViewChild</p>
+      <p>On button click call the function as:</p>
+      <pre>
+  @ViewChild('manualControl', &#123;static: true&#125;) manualControl: Ng2CarouselComponent;
+
+  playNext() &#123;
+    this.manualControl.playNext()
+  &#125;
+
+  playPrev() &#123;
+    this.manualControl.playPrev()
+  &#125;
+      </pre>
+
+  </div>
+  <div class="item_demo_container">
+    <div class="item_demo with_button">
+        <button (click)="playPrev()">Prev</button>
+        <ng2-carousel #manualControl style="width: 70%;height:100% " [items]="items" [setting]="setting7"></ng2-carousel>
+        <button (click)="playNext()"> Next </button>
+    </div>
+    <div class="item_details">
+      <pre>
+      setting = &#123;
+        autoPlay: false,
+        showArrow: false,
+        holdTime: 5000,
+        showDots: true,
+        animation: Ng2AnimationType.ZOOM_IN
+      &#125;
+      </pre>
+    </div>
+  </div>
 </div>
