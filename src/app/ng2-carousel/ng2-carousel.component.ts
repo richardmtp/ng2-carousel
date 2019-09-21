@@ -3,7 +3,7 @@ import { Ng2CarouselItem } from '../models/ng2-carousel-item.model';
 import { Ng2CarouselSetting } from '../models/ng2-carousel-setting.model';
 import { DEFAULT } from '../models/ng2-carousel-setting-default.model';
 import { Ng2AnimationType } from '../models/ng2-carousel-animation-type.model';
-import { FadeIn, FadeInLeft, FadeInRight, ZoomIn } from '../animation/animation';
+import { FadeIn, FadeInLeft, FadeInRight, ZoomIn, CardInLeft, CardInRight } from '../animation/animation';
 
 @Component({
   selector: 'ng2-carousel',
@@ -13,7 +13,9 @@ import { FadeIn, FadeInLeft, FadeInRight, ZoomIn } from '../animation/animation'
     FadeIn,
     FadeInLeft,
     FadeInRight,
-    ZoomIn
+    ZoomIn,
+    CardInLeft,
+    CardInRight,
   ]
 })
 export class Ng2CarouselComponent implements OnInit {

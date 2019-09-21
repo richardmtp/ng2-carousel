@@ -19,6 +19,8 @@ export class AppComponent {
 
   setting3: Ng2CarouselSetting;
 
+  setting4: Ng2CarouselSetting;
+
   @ViewChild('c1', {static: true}) c1: Ng2CarouselComponent;
 
   @ViewChild('c2', {static: true}) c2: Ng2CarouselComponent;
@@ -31,7 +33,7 @@ export class AppComponent {
 
     this.setting = {
       autoPlay: true,
-      showArrow: false,
+      showArrow: true,
       holdTime: 5000,
       showDots: true,
       animation: Ng2AnimationType.FADE_IN_LEFT
@@ -39,10 +41,10 @@ export class AppComponent {
 
     this.setting2 = {
       autoPlay: true,
-      showArrow: false,
+      showArrow: true,
       holdTime: 5000,
       showDots: true,
-      animation: Ng2AnimationType.FADE_IN_RIGHT
+      animation: Ng2AnimationType.CARD_IN_RIGHT
     }
 
     this.setting3 = {
@@ -51,6 +53,14 @@ export class AppComponent {
       holdTime: 5000,
       showDots: true,
       animation: Ng2AnimationType.ZOOM_IN
+    }
+
+    this.setting4 = {
+      autoPlay: true,
+      showArrow: true,
+      holdTime: 5000,
+      showDots: true,
+      animation: Ng2AnimationType.FADE_IN_LEFT
     }
 
   }

@@ -1,5 +1,9 @@
-<div class="container">
+<div class="container ">
   
+  <div *ngIf="animation.NONE === setting.animation">
+    <img [ngStyle]="{'display': idx === i? 'block': 'none'}" *ngFor="let item of items; let i = index" src="{{item.src}}" >
+  </div>
+
   <div *ngIf="animation.FADE_IN === setting.animation">
     <img [@fadeIn]="idx === i?'active':'hidden'" *ngFor="let item of items; let i = index" src="{{item.src}}" >
   </div>
@@ -16,8 +20,20 @@
     <img [@zoomIn]="idx === i?'active':'hidden'" *ngFor="let item of items; let i = index" src="{{item.src}}" >
   </div>
 
-  <div *ngIf="setting.showArrow && items.length > 1" class="prev_button" (click)="playPrev()"><div class="prev_button_inside"></div></div>
-  <div *ngIf="setting.showArrow && items.length > 1" class="next_button" (click)="playNext()"><div class="next_button_inside"></div></div>
+  <div *ngIf="animation.CARD_IN_LEFT === setting.animation">
+    <img class="card-like" [@cardInLeft]="idx === i?'active':'hidden'" *ngFor="let item of items; let i = index" src="{{item.src}}" >
+  </div>
+
+  <div *ngIf="animation.CARD_IN_RIGHT === setting.animation">
+    <img class="card-like" [@cardInRight]="idx === i?'active':'hidden'" *ngFor="let item of items; let i = index" src="{{item.src}}" >
+  </div>
+
+  <div *ngIf="animation.CARD_IN_LEFT !== setting.animation && animation.CARD_IN_RIGHT !== setting.animation && setting.showArrow && items.length > 1" class="prev_button" (click)="playPrev()"><div class="prev_button_inside"></div></div>
+  <div *ngIf="animation.CARD_IN_LEFT !== setting.animation && animation.CARD_IN_RIGHT !== setting.animation && setting.showArrow && items.length > 1" class="next_button" (click)="playNext()"><div class="next_button_inside"></div></div>
+
+  <div *ngIf="(animation.CARD_IN_LEFT === setting.animation || animation.CARD_IN_RIGHT === setting.animation) && setting.showArrow && items.length > 1" class="prev_button" style="left: 10%" (click)="playPrev()"><div class="prev_button_inside"></div></div>
+  <div *ngIf="(animation.CARD_IN_LEFT === setting.animation || animation.CARD_IN_RIGHT === setting.animation) && setting.showArrow && items.length > 1" class="next_button" style="right: 10%" (click)="playNext()"><div class="next_button_inside"></div></div>
+
   <div class="dots" *ngIf="setting.showDots && items.length > 1">
     <div *ngFor="let item of items; let j = index" [ngClass]="{'current': idx === j, 'other': idx !== j}" class="dot"></div>
   </div>

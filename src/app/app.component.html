@@ -1,6 +1,7 @@
 <div>
   <button (click)="playPrev()">Prev</button>
-  <div style="width: 500px; height: 200px; margin: 0 auto; box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important">
+  <!-- <div style="width: 500px; height: 200px; margin: 0 auto; box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important"> -->
+      <div style="width: 500px; height: 250px; margin: 0 auto;">
     <ng2-carousel #c1 [items]="items" [setting]="setting"></ng2-carousel>
   </div>
   <button (click)="playNext()"> Next </button>
@@ -14,5 +15,5 @@
 </div>
 
 <div style="width: 500px; height: 300px; margin-top: 50px;">
-  <ng2-carousel [items]="items"></ng2-carousel>
+  <ng2-carousel [items]="items" [setting]="setting4"></ng2-carousel>
 </div>
