@@ -1,7 +1,7 @@
 An amazing responsive carousel for Angular projects. Which supports auto play, manual controls with lot of animations
 
 ### Demo
-https://ngx-carousel.s3.us-east-2.amazonaws.com/1.0.0/index.html
+https://ngx-carousel.s3.us-east-2.amazonaws.com/1.0.1/index.html
 
 ### Getting started
 `$ npm i ngx-carousel`
