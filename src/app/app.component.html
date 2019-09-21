@@ -1,33 +1,33 @@
 <div class="heading-description_container">
   <div class="heading">
-    <h1>ngx-carousel</h1>
+    <h1>ngrx-carousel</h1>
   </div>
   <div class="descrption">
     <h4>Description</h4>
     <p>An amazing responsive carousel for Angular projects. Which supports auto play, manual controls with lot of animations</p>
-    <p>Git repo https://github.com/richardmtp/ngx-carousel/</p>
+    <p>Git repo https://github.com/richardmtp/ngrx-carousel/</p>
     <div class="example-container">
       <h5 class="eg">How to use?</h5>
-      <p> * npm i ngx-carousel </p>
-      <p> * Import NgxCarouselModule in your app.module.ts </p>
+      <p> * npm i ngrx-carousel </p>
+      <p> * Import NgrxCarouselModule in your app.module.ts </p>
       <pre>
-          import &#60; NgxCarouselModule &#62; from 'ngx-carousel';
+          import &#60; NgrxCarouselModule &#62; from 'ngrx-carousel';
           imports: [
             ...,
-            NgxCarouselModule
+            NgrxCarouselModule
           ],
       </pre>
-      <p> * add ngx-carousel tag app.module.html </p>
+      <p> * add ngrx-carousel tag app.module.html </p>
       <pre>
-          &#60;ngx-carousel [items]="items" [setting]="setting"&#62;&#60;/ngx-carousel&#62;
+          &#60;ngrx-carousel [items]="items" [setting]="setting"&#62;&#60;/ngrx-carousel&#62;
       </pre>
       <p> * app.module.ts import following items</p>
       <pre>
-          import &#60; NgxCarouselItem, NgxCarouselSetting, NgxAnimationType &#62; from 'ngx-carousel';
+          import &#60; NgrxCarouselItem, NgrxCarouselSetting, NgrxAnimationType &#62; from 'ngrx-carousel';
 
-          items: Array&#60;NgxCarouselItem&#62; = &#91;&#93;;
+          items: Array&#60;NgrxCarouselItem&#62; = &#91;&#93;;
 
-          setting: NgxCarouselSetting;
+          setting: NgrxCarouselSetting;
 
           export class AppComponent &#123;
             constructor() &#123;
@@ -41,7 +41,7 @@
                 showArrow: true,
                 holdTime: 5000,
                 showDots: false,
-                animation: NgxAnimationType.FADE_IN_LEFT
+                animation: NgrxAnimationType.FADE_IN_LEFT
               &#125;
             &#125;
           &#125;
@@ -55,7 +55,7 @@
   </div>
   <div class="item_demo_container">
     <div class="item_demo">
-      <ngx-carousel [items]="items" [setting]="setting"></ngx-carousel>
+      <ngrx-carousel [items]="items" [setting]="setting"></ngrx-carousel>
     </div>
     <div class="item_details">
       <pre>
@@ -64,7 +64,7 @@
       showArrow: true,
       holdTime: 5000,
       showDots: false,
-      animation: NgxAnimationType.CARD_IN_LEFT
+      animation: NgrxAnimationType.CARD_IN_LEFT
     &#125;
       </pre>
     </div>
@@ -76,7 +76,7 @@
   </div>
   <div class="item_demo_container">
     <div class="item_demo">
-      <ngx-carousel [items]="items" [setting]="settingx"></ngx-carousel>
+      <ngrx-carousel [items]="items" [setting]="settingrx"></ngrx-carousel>
     </div>
     <div class="item_details">
       <pre>
@@ -85,7 +85,7 @@
       showArrow: true,
       holdTime: 5000,
       showDots: true,
-      animation: NgxAnimationType.CARD_IN_RIGHT
+      animation: NgrxAnimationType.CARD_IN_RIGHT
     &#125;
       </pre>
     </div>
@@ -97,7 +97,7 @@
   </div>
   <div class="item_demo_container">
     <div class="item_demo">
-      <ngx-carousel [items]="items" [setting]="setting3"></ngx-carousel>
+      <ngrx-carousel [items]="items" [setting]="setting3"></ngrx-carousel>
     </div>
     <div class="item_details">
       <pre>
@@ -106,7 +106,7 @@
       showArrow: true,
       holdTime: 5000,
       showDots: true,
-      animation: NgxAnimationType.FADE_IN
+      animation: NgrxAnimationType.FADE_IN
     &#125;
       </pre>
     </div>
@@ -118,7 +118,7 @@
   </div>
   <div class="item_demo_container">
     <div class="item_demo">
-      <ngx-carousel [items]="items" [setting]="setting4"></ngx-carousel>
+      <ngrx-carousel [items]="items" [setting]="setting4"></ngrx-carousel>
     </div>
     <div class="item_details">
       <pre>
@@ -127,7 +127,7 @@
       showArrow: true,
       holdTime: 5000,
       showDots: true,
-      animation: NgxAnimationType.FADE_IN_LEFT
+      animation: NgrxAnimationType.FADE_IN_LEFT
     &#125;
       </pre>
     </div>
@@ -139,7 +139,7 @@
   </div>
   <div class="item_demo_container">
     <div class="item_demo">
-      <ngx-carousel [items]="items" [setting]="setting5"></ngx-carousel>
+      <ngrx-carousel [items]="items" [setting]="setting5"></ngrx-carousel>
     </div>
     <div class="item_details">
       <pre>
@@ -148,7 +148,7 @@
       showArrow: true,
       holdTime: 5000,
       showDots: true,
-      animation: NgxAnimationType.FADE_IN_RIGHT
+      animation: NgrxAnimationType.FADE_IN_RIGHT
     &#125;
       </pre>
     </div>
@@ -160,7 +160,7 @@
   </div>
   <div class="item_demo_container">
     <div class="item_demo">
-      <ngx-carousel [items]="items" [setting]="setting6"></ngx-carousel>
+      <ngrx-carousel [items]="items" [setting]="setting6"></ngrx-carousel>
     </div>
     <div class="item_details">
       <pre>
@@ -169,7 +169,7 @@
       showArrow: true,
       holdTime: 5000,
       showDots: true,
-      animation: NgxAnimationType.ZOOM_IN
+      animation: NgrxAnimationType.ZOOM_IN
     &#125;
       </pre>
     </div>
@@ -182,14 +182,14 @@
   <div class="manual-description">
       <h5 class="eg">Eg:</h5>
       <pre> 
-        // #manualControl : This is 'Reference variable' which is used to control ngx-carousel as a @ViewChild
-        &#60;ngx-carousel <strong>#manualControl</strong> [items]="items" [setting]="setting"&#62;&#60;/ngx-carousel&#62; 
+        // #manualControl : This is 'Reference variable' which is used to control ngrx-carousel as a @ViewChild
+        &#60;ngrx-carousel <strong>#manualControl</strong> [items]="items" [setting]="setting"&#62;&#60;/ngrx-carousel&#62; 
       </pre>
       <pre>
         // Trigger button click
 
-        import &#60; NgxCarouselComponent &#62; from 'ngx-carousel';
-        @ViewChild('manualControl', &#123;static: true&#125;) manualControl: NgxCarouselComponent;
+        import &#60; NgrxCarouselComponent &#62; from 'ngrx-carousel';
+        @ViewChild('manualControl', &#123;static: true&#125;) manualControl: NgrxCarouselComponent;
 
         playNext() &#123;
           this.manualControl.playNext()
@@ -203,7 +203,7 @@
   <div class="item_demo_container">
     <div class="item_demo with_button">
         <button (click)="playPrev()">Prev</button>
-        <ngx-carousel #manualControl style="width: 70%;height:100% " [items]="items" [setting]="setting7"></ngx-carousel>
+        <ngrx-carousel #manualControl style="width: 70%;height:100% " [items]="items" [setting]="setting7"></ngrx-carousel>
         <button (click)="playNext()"> Next </button>
     </div>
     <div class="item_details">
@@ -213,7 +213,7 @@
         showArrow: false,
         holdTime: 5000,
         showDots: true,
-        animation: NgxAnimationType.ZOOM_IN
+        animation: NgrxAnimationType.ZOOM_IN
       &#125;
       </pre>
     </div>
