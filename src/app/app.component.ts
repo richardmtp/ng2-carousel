@@ -34,7 +34,7 @@ export class AppComponent {
       showArrow: false,
       holdTime: 5000,
       showDots: true,
-      animation: Ng2AnimationType.FLY_FROM_LEFT
+      animation: Ng2AnimationType.FADE_IN_LEFT
     }
 
     this.setting2 = {
@@ -42,7 +42,7 @@ export class AppComponent {
       showArrow: false,
       holdTime: 5000,
       showDots: true,
-      animation: Ng2AnimationType.FLY_FROM_RIGHT
+      animation: Ng2AnimationType.FADE_IN_RIGHT
     }
 
     this.setting3 = {
@@ -50,7 +50,7 @@ export class AppComponent {
       showArrow: true,
       holdTime: 5000,
       showDots: true,
-      animation: Ng2AnimationType.ZOOM_IN_FROM_CENTER
+      animation: Ng2AnimationType.ZOOM_IN
     }
 
   }
