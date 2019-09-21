@@ -1,4 +1,4 @@
-<div class="container ">
+<div class="container" [ngStyle]="{'border-radius': (animation.CARD_IN_LEFT === setting.animation || animation.CARD_IN_RIGHT === setting.animation) ? '20px':'0px'}">
   
   <div *ngIf="animation.NONE === setting.animation">
     <img [ngStyle]="{'display': idx === i? 'block': 'none'}" *ngFor="let item of items; let i = index" src="{{item.src}}" >
