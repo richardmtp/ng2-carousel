@@ -24,7 +24,7 @@ export class Ng2CarouselComponent implements OnInit {
 
   @Input() setting: Ng2CarouselSetting;
 
-  private idx: number = -1;
+  idx: number = -1;
 
   private timeout: any;
 
