@@ -67,3 +67,41 @@ export const ZoomIn = [
     ])
   ])
 ];
+
+export const CardInLeft = [
+  trigger('cardInLeft', [
+    state('active', style({ left: '10%', opacity: '1', visibility: 'visible' })),
+    state('hidden', style({ left: '-80%', opacity: '1', visibility: 'visible' })),
+    transition('active => hidden', [
+      sequence([
+        animate('0ms 2000ms cubic-bezier(0.35, 0, 0.25, 1)', style({
+          left: '100%',
+        })),
+      ])
+    ]),
+    transition('hidden => active', [
+      animate('0ms 2000ms cubic-bezier(0.35, 0, 0.25, 1)', style({
+        left: '10%',
+      })),
+    ])
+  ])
+];
+
+export const CardInRight = [
+  trigger('cardInRight', [
+    state('active', style({ left: '10%', opacity: '1', visibility: 'visible' })),
+    state('hidden', style({ left: '100%', opacity: '1', visibility: 'visible' })),
+    transition('active => hidden', [
+      sequence([
+        animate('0ms 2000ms cubic-bezier(0.35, 0, 0.25, 1)', style({
+          left: '-100%',
+        })),
+      ])
+    ]),
+    transition('hidden => active', [
+      animate('0ms 2000ms cubic-bezier(0.35, 0, 0.25, 1)', style({
+        left: '10%',
+      })),
+    ])
+  ])
+];
