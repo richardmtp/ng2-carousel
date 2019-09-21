@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { Ng2CarouselItem } from '../models/ng2-carousel-item.model';
 import { Ng2CarouselSetting } from '../models/ng2-carousel-setting.model';
 import { DEFAULT } from '../models/ng2-carousel-setting-default.model';
@@ -18,7 +18,7 @@ import { FadeIn, FadeInLeft, FadeInRight, ZoomIn, CardInLeft, CardInRight } from
     CardInRight,
   ]
 })
-export class Ng2CarouselComponent implements OnInit {
+export class Ng2CarouselComponent implements OnInit, OnDestroy {
 
   @Input() items: Array<Ng2CarouselItem>;
 
@@ -34,8 +34,6 @@ export class Ng2CarouselComponent implements OnInit {
   }
   
   ngOnInit() {
-    console.log(this.animation)
-    console.log(this.setting)
     if(!this.setting) {
       this.setting = Object.assign({}, DEFAULT);
     } else {
@@ -84,6 +82,12 @@ export class Ng2CarouselComponent implements OnInit {
     }
     this.idx -= 1;
     this.checkAutoPlay();
+  }
+
+  ngOnDestroy() {
+    if(this.timeout) {
+      window.clearTimeout(this.timeout)
+    }
   }
 
 }
