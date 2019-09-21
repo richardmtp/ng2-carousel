@@ -1,27 +1,74 @@
-# Ng2Carousel
+### Demo
+https://ng2-carousel.s3.us-east-2.amazonaws.com/1.0.0/index.html
+### Getting started
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+`$ npm i ng2-carousel`
 
-## Development server
+####Import Ng2CarouselModule in your app.module.ts
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+    import < Ng2CarouselModule > from 'ng2-carousel';
+    imports: [
+      ...,
+       Ng2CarouselModule
+    ],
 
-## Code scaffolding
+####Add ng2-carousel tag in your component html
+```
+<ng2-carousel [items]="items" [setting]="setting"></ng2-carousel>
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+####Import following items in your component
+```javascript
+import < Ng2CarouselItem, Ng2CarouselSetting, Ng2AnimationType > from 'ng2-carousel';
 
-## Build
+items: Array<Ng2CarouselItem> = [];
+setting: Ng2CarouselSetting;
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+export class AppComponent {
+	constructor() {
+		this.items = [ { src: 'assets/image1.png' }, { src: 'assets/image2.png' }, ... ]
+		this.setting = {
+    		autoPlay: true,
+    		showArrow: true,
+    		holdTime: 5000,
+    		showDots: false,
+    		animation: Ng2AnimationType.FADE_IN_LEFT
+		}
+	}
+}
+```
 
-## Running unit tests
+###MANUAL CONTROL
+```
+<ng2-carousel #manualControl [items]="items" [setting]="setting"></ng2-carousel> 
+```
+```javascript
+import < Ng2CarouselItem, Ng2CarouselSetting, Ng2AnimationType, Ng2CarouselComponent  > from 'ng2-carousel';
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+items: Array<Ng2CarouselItem> = [];
+setting: Ng2CarouselSetting;
 
-## Running end-to-end tests
+export class AppComponent {
+	
+	@ViewChild('manualControl', {static: true}) manualControl: Ng2CarouselComponent;
+	
+	constructor() {
+		this.items = [ { src: 'assets/image1.png' }, { src: 'assets/image2.png' }, ... ]
+		this.setting = {
+    		autoPlay: false,
+    		showArrow: false,
+    		holdTime: 5000,
+    		showDots: false,
+    		animation: Ng2AnimationType.FADE_IN_LEFT
+		}
+	}
+	
+	playNext() {
+		this.manualControl.playNext()
+	}
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+	playPrev() {
+		this.manualControl.playPrev()
+	}
+}
+```

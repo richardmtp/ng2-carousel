@@ -29,33 +29,22 @@
           setting: Ng2CarouselSetting;
 
           export class AppComponent &#123;
-            this.items = &#91;&#93;
-            this.items.push&#40;&#123;src: 'assets/image1.png'&#125;&#41;
-            this.items.push&#40;&#123;src: 'assets/image2.png'&#125;&#41;
-            this.items.push&#40;&#123;src: 'assets/image3.png'&#125;&#41;
+            constructor() &#123;
+              this.items = &#91;&#93;
+              this.items.push&#40;&#123;src: 'assets/image1.png'&#125;&#41;
+              this.items.push&#40;&#123;src: 'assets/image2.png'&#125;&#41;
+              this.items.push&#40;&#123;src: 'assets/image3.png'&#125;&#41;
 
-            this.setting = &#123;
-              autoPlay: true,
-              showArrow: true,
-              holdTime: 5000,
-              showDots: false,
-              animation: Ng2AnimationType.FADE_IN_LEFT
+              this.setting = &#123;
+                autoPlay: true,
+                showArrow: true,
+                holdTime: 5000,
+                showDots: false,
+                animation: Ng2AnimationType.FADE_IN_LEFT
+              &#125;
             &#125;
-
           &#125;
-
       </pre>
-
-      <!-- <p>Items : items can be array of images or http url</p>
-      <p>Settings : </p> <pre>
-      setting = &#123;
-        autoPlay: true,
-        showArrow: true,
-        holdTime: 5000,
-        showDots: false,
-        animation: Ng2AnimationType.FADE_IN_LEFT
-      &#125;
-      </pre> -->
     </div>
   </div>
 </div>
