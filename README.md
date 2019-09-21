@@ -1,31 +1,31 @@
 An amazing responsive carousel for Angular projects. Which supports auto play, manual controls with lot of animations
 
 ### Demo
-https://ngx-carousel.s3.us-east-2.amazonaws.com/1.0.1/index.html
+https://ngrx-carousel.s3.us-east-2.amazonaws.com/1.0.2/index.html
 
 ### Getting started
-`$ npm i ngx-carousel`
+`$ npm i ngrx-carousel`
 
-#### Import NgxCarouselModule in your app.module.ts
+#### Import NgrxCarouselModule in your app.module.ts
 ```javascript
-    import < NgxCarouselModule > from 'ngx-carousel';
+    import < NgrxCarouselModule > from 'ngrx-carousel';
     imports: [
       ...,
-       NgxCarouselModule
+       NgrxCarouselModule
     ],
 ```
 
-#### Add ngx-carousel tag in your component html
+#### Add ngrx-carousel tag in your component html
 ```
-<ngx-carousel [items]="items" [setting]="setting"></ngx-carousel>
+<ngrx-carousel [items]="items" [setting]="setting"></ngrx-carousel>
 ```
 
 #### Import following items in your component
 ```javascript
-import < NgxCarouselItem, NgxCarouselSetting, NgxAnimationType > from 'ngx-carousel';
+import < NgrxCarouselItem, NgrxCarouselSetting, NgrxAnimationType > from 'ngrx-carousel';
 
-items: Array<NgxCarouselItem> = [];
-setting: NgxCarouselSetting;
+items: Array<NgrxCarouselItem> = [];
+setting: NgrxCarouselSetting;
 
 export class AppComponent {
 	constructor() {
@@ -35,7 +35,7 @@ export class AppComponent {
     		showArrow: true,
     		holdTime: 5000,
     		showDots: false,
-    		animation: NgxAnimationType.FADE_IN_LEFT
+    		animation: NgrxAnimationType.FADE_IN_LEFT
 		}
 	}
 }
@@ -43,17 +43,17 @@ export class AppComponent {
 
 ### MANUAL CONTROL
 ```
-<ngx-carousel #manualControl [items]="items" [setting]="setting"></ngx-carousel> 
+<ngrx-carousel #manualControl [items]="items" [setting]="setting"></ngrx-carousel> 
 ```
 ```javascript
-import < NgxCarouselItem, NgxCarouselSetting, NgxAnimationType, NgxCarouselComponent  > from 'ngx-carousel';
+import < NgrxCarouselItem, NgrxCarouselSetting, NgrxAnimationType, NgrxCarouselComponent  > from 'ngrx-carousel';
 
-items: Array<NgxCarouselItem> = [];
-setting: NgxCarouselSetting;
+items: Array<NgrxCarouselItem> = [];
+setting: NgrxCarouselSetting;
 
 export class AppComponent {
 	
-	@ViewChild('manualControl', {static: true}) manualControl: NgxCarouselComponent;
+	@ViewChild('manualControl', {static: true}) manualControl: NgrxCarouselComponent;
 	
 	constructor() {
 		this.items = [ { src: 'assets/image1.png' }, { src: 'assets/image2.png' }, ... ]
@@ -62,7 +62,7 @@ export class AppComponent {
     		showArrow: false,
     		holdTime: 5000,
     		showDots: false,
-    		animation: NgxAnimationType.FADE_IN_LEFT
+    		animation: NgrxAnimationType.FADE_IN_LEFT
 		}
 	}
 	

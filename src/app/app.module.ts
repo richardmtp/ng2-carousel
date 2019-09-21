@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { NgxCarouselModule } from './ngx-carousel/ngx-carousel.module';
+import { NgrxCarouselModule } from './ngrx-carousel/ngrx-carousel.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { NgxCarouselModule } from './ngx-carousel/ngx-carousel.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    NgxCarouselModule
+    NgrxCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
