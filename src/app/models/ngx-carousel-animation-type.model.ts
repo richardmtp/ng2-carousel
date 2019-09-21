@@ -1,4 +1,4 @@
-export enum Ng2AnimationType {
+export enum NgxAnimationType {
   NONE = 'NONE',
   FADE_IN = 'FADE_IN',
   FADE_IN_LEFT = 'FADE_IN_LEFT',
