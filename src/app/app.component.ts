@@ -25,9 +25,10 @@ export class AppComponent {
 
   setting6: Ng2CarouselSetting;
 
-  @ViewChild('c1', {static: true}) c1: Ng2CarouselComponent;
+  setting7: Ng2CarouselSetting;
 
-  @ViewChild('c2', {static: true}) c2: Ng2CarouselComponent;
+
+  @ViewChild('manualControl', {static: true}) manualControl: Ng2CarouselComponent;
 
   constructor() {
     this.items = []
@@ -82,15 +83,22 @@ export class AppComponent {
       showDots: true,
       animation: Ng2AnimationType.ZOOM_IN
     }
+    this.setting7 = {
+      autoPlay: false,
+      showArrow: false,
+      holdTime: 5000,
+      showDots: true,
+      animation: Ng2AnimationType.ZOOM_IN
+    }
 
   }
 
   playNext() {
-    this.c1.playNext()
+    this.manualControl.playNext()
   }
 
   playPrev() {
-    this.c1.playPrev()
+    this.manualControl.playPrev()
   }
 
 }
