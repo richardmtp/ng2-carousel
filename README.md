@@ -8,7 +8,7 @@ https://ngrx-carousel.s3.us-east-2.amazonaws.com/1.0.2/index.html
 
 #### Import NgrxCarouselModule in your app.module.ts
 ```javascript
-    import < NgrxCarouselModule > from 'ngrx-carousel';
+    import { NgrxCarouselModule } from 'ngrx-carousel';
     imports: [
       ...,
        NgrxCarouselModule
@@ -22,7 +22,7 @@ https://ngrx-carousel.s3.us-east-2.amazonaws.com/1.0.2/index.html
 
 #### Import following items in your component
 ```javascript
-import < NgrxCarouselItem, NgrxCarouselSetting, NgrxAnimationType > from 'ngrx-carousel';
+import { NgrxCarouselItem, NgrxCarouselSetting, NgrxAnimationType } from 'ngrx-carousel';
 
 items: Array<NgrxCarouselItem> = [];
 setting: NgrxCarouselSetting;
@@ -46,7 +46,7 @@ export class AppComponent {
 <ngrx-carousel #manualControl [items]="items" [setting]="setting"></ngrx-carousel> 
 ```
 ```javascript
-import < NgrxCarouselItem, NgrxCarouselSetting, NgrxAnimationType, NgrxCarouselComponent  > from 'ngrx-carousel';
+import { NgrxCarouselItem, NgrxCarouselSetting, NgrxAnimationType, NgrxCarouselComponent  } from 'ngrx-carousel';
 
 items: Array<NgrxCarouselItem> = [];
 setting: NgrxCarouselSetting;
