@@ -11,7 +11,7 @@
       <p> * npm i ngrx-carousel </p>
       <p> * Import NgrxCarouselModule in your app.module.ts </p>
       <pre>
-          import &#60; NgrxCarouselModule &#62; from 'ngrx-carousel';
+          import &#123; NgrxCarouselModule &#125; from 'ngrx-carousel';
           imports: [
             ...,
             NgrxCarouselModule
@@ -23,7 +23,7 @@
       </pre>
       <p> * app.module.ts import following items</p>
       <pre>
-          import &#60; NgrxCarouselItem, NgrxCarouselSetting, NgrxAnimationType &#62; from 'ngrx-carousel';
+          import &#123; NgrxCarouselItem, NgrxCarouselSetting, NgrxAnimationType &#125; from 'ngrx-carousel';
 
           items: Array&#60;NgrxCarouselItem&#62; = &#91;&#93;;
 
@@ -188,7 +188,7 @@
       <pre>
         // Trigger button click
 
-        import &#60; NgrxCarouselComponent &#62; from 'ngrx-carousel';
+        import &#123; NgrxCarouselComponent &#125; from 'ngrx-carousel';
         @ViewChild('manualControl', &#123;static: true&#125;) manualControl: NgrxCarouselComponent;
 
         playNext() &#123;
